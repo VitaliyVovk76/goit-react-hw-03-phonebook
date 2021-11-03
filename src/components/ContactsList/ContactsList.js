@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import shortid from "shortid";
 import s from "./ContactsList.module.css";
 
@@ -21,4 +22,10 @@ const ContactList = ({ contacts, onDeleteContact }) => (
     </ul>
   </div>
 );
+
+ContactList.propTypes = {
+  contacts: PropTypes.array.isRequired,
+  onDeleteContact: PropTypes.func.isRequired,
+};
+
 export default ContactList;
